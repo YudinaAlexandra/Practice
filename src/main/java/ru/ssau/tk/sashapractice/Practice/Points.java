@@ -21,4 +21,8 @@ public class Points {
     private Points(){
 
     }
+    public static Point enlarge(Point point1, double number) {
+        Point enlargePoint = new Point(point1.x * number, point1.y * number, point1.z * number);
+        return enlargePoint;
+    }
 }
