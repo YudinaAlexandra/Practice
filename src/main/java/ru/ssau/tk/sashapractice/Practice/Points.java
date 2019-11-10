@@ -33,4 +33,12 @@ public class Points {
         Point inversePoint = new Point(1/point1.x, 1/point1.y, 1/point1.z);
         return inversePoint;
     }
+    public static Point scalarProduct(Point point1, Point point2){
+        Point scalarProductPoint = new Point(point1.x*point2.x, point1.y*point2.y,point1.z*point2.z);
+        return scalarProductPoint;
+    }
+    public static Point vectorProduct(Point point1, Point point2){
+        Point vectorProductPoint = new Point(point1.y * point2.z - point2.y * point1.z, point2.x * point1.z - point1.x * point2.z, point1.x * point2.y - point2.x * point1.y);
+        return vectorProductPoint;
+    }
 }
