@@ -25,4 +25,12 @@ public class Points {
         Point enlargePoint = new Point(point1.x * number, point1.y * number, point1.z * number);
         return enlargePoint;
     }
+    public static Point opposite(Point point1){
+        Point oppositePoint = new Point(point1.x*(-1),point1.y*(-1),point1.z*(-1));
+        return oppositePoint;
+    }
+    public static Point inverse(Point point1){
+        Point inversePoint = new Point(1/point1.x, 1/point1.y, 1/point1.z);
+        return inversePoint;
+    }
 }
