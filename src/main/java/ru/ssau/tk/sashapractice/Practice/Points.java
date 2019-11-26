@@ -6,7 +6,7 @@ public class Points {
         Point sumPoints = new Point(point1.x + point2.x, point1.y + point2.y, point1.z + point2.z);
         return sumPoints;
     }
-    public static Point subtruct(Point point1, Point point2) {
+    public static Point subtract(Point point1, Point point2) {
         Point subtructPoints = new Point(point1.x - point2.x, point1.y - point2.y, point1.z - point2.z);
         return subtructPoints;
     }
