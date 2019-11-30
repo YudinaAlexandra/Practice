@@ -9,10 +9,12 @@ class PersonTest {
             onePerson.setFirstName("Tim");
             onePerson.setLastName("Vin");
             onePerson.setPassportId(259863);
+            onePerson.setGender(Gender.MALE);
 
             assertEquals(onePerson.getFirstName(), "Tim");
             assertEquals(onePerson.getLastName(), "Vin");
             assertEquals(onePerson.getPassportId(), 259863);
+            assertEquals(onePerson.getGender(), Gender.MALE);
         }
 
 }
