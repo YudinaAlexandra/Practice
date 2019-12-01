@@ -17,4 +17,11 @@ public class Array {
         }
         return newArray;
     }
+    static public double[] oddNumberArray(int lenght){
+        double[] newArray = new double[lenght];
+        for(int i=0; i<lenght;i++){
+            newArray[i]=(2*i)+1;
+        }
+        return newArray;
+    }
 }

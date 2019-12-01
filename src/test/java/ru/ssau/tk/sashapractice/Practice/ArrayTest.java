@@ -14,4 +14,10 @@ class ArrayTest {
         assertEquals(Array.newArrayOneTwo(5)[0], 2.0);
         assertEquals(Array.newArrayOneTwo(5)[4], 2.0);
     }
+    @Test
+    public void testOddNumbeArray(){
+        assertEquals(Array.oddNumberArray(5)[1],3.0);
+        assertEquals(Array.oddNumberArray(5)[2],5.0);
+        assertEquals(Array.oddNumberArray(5)[4],9.0);
+    }
 }
