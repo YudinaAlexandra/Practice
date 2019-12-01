@@ -20,4 +20,10 @@ class ArrayTest {
         assertEquals(Array.oddNumberArray(5)[2],5.0);
         assertEquals(Array.oddNumberArray(5)[4],9.0);
     }
+    @Test
+    public void testEvenNumberArray(){
+        assertEquals(Array.evenNumberArray(5)[0],10.0);
+        assertEquals(Array.evenNumberArray(5)[2],6.0);
+        assertEquals(Array.evenNumberArray(5)[4],2.0);
+    }
 }

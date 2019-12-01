@@ -8,6 +8,7 @@ public class Array {
         }
         return newArray;
     }
+
     static public double[] newArrayOneTwo(int lenght) {
         double[] newArray = new double[lenght];
         newArray[0] = 2;
@@ -17,10 +18,19 @@ public class Array {
         }
         return newArray;
     }
-    static public double[] oddNumberArray(int lenght){
+
+    static public double[] oddNumberArray(int lenght) {
         double[] newArray = new double[lenght];
-        for(int i=0; i<lenght;i++){
-            newArray[i]=(2*i)+1;
+        for (int i = 0; i < lenght; i++) {
+            newArray[i] = (2 * i) + 1;
+        }
+        return newArray;
+    }
+
+    static public double[] evenNumberArray(int lenght) {
+        double[] newArray = new double[lenght];
+        for (int i = 0; i < lenght; i++) {
+            newArray[i] = (lenght - i) * 2;
         }
         return newArray;
     }
