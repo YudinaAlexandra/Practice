@@ -34,4 +34,13 @@ public class Array {
         }
         return newArray;
     }
+    static public double[] fibonacciNumberArray(int lenght){
+        double[] newArray = new double[lenght];
+        newArray[0]=1;
+        newArray[1]=1;
+        for(int i=2; i<lenght; i++){
+         newArray[i]=newArray[i-1]+newArray[i-2];
+        }
+        return newArray;
+    }
 }

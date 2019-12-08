@@ -26,4 +26,10 @@ class ArrayTest {
         assertEquals(Array.evenNumberArray(5)[2],6.0);
         assertEquals(Array.evenNumberArray(5)[4],2.0);
     }
+    @Test
+    public void testFibonacciNumberArray(){
+        assertEquals(Array.fibonacciNumberArray(5)[0], 1);
+        assertEquals(Array.fibonacciNumberArray(5)[1], 1);
+        assertEquals(Array.fibonacciNumberArray(5)[2], 2);
+    }
 }
