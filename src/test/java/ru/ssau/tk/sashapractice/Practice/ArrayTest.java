@@ -32,4 +32,10 @@ class ArrayTest {
         assertEquals(Array.fibonacciNumberArray(5)[1], 1);
         assertEquals(Array.fibonacciNumberArray(5)[2], 2);
     }
+    @Test
+    public void  testIndexSquareArray(){
+        assertEquals(Array.indexSquareArray(5)[1],1);
+        assertEquals(Array.indexSquareArray(5)[2],4);
+        assertEquals(Array.indexSquareArray(5)[3],9);
+    }
 }
