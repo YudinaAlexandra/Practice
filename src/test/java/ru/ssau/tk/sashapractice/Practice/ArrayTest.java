@@ -38,4 +38,16 @@ class ArrayTest {
         assertEquals(Array.indexSquareArray(5)[2],4);
         assertEquals(Array.indexSquareArray(5)[3],9);
     }
+    @Test
+    public void testQuadraticEquationArray() {
+        double[] oneQuadraticEquationArray = Array.quadraticEquationArray(1, -2, -3);
+        assertEquals(oneQuadraticEquationArray[0], -1, 0.0001);
+        assertEquals(oneQuadraticEquationArray[1], 3, 0.0001);
+        double[] twoQuadraticEquationArray = Array.quadraticEquationArray(0, -2, -5);
+        assertEquals(twoQuadraticEquationArray[0], -5.0 / 2, 0.0001);
+        assertEquals(Array.quadraticEquationArray(0, 0, 5).length, 0);
+        double[] treeQuadraticEquationArray = Array.quadraticEquationArray(-9, 6, -1);
+        assertEquals(treeQuadraticEquationArray[0], 1.0 / 3, 0.0001);
+        assertEquals(Array.quadraticEquationArray(7, -1, 2).length, 0);
+    }
 }

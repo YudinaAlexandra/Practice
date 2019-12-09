@@ -54,4 +54,28 @@ public class Array {
         }
         return newArray;
     }
+    static public double[] quadraticEquationArray(double a, double b, double c){
+        if (a == 0) {
+            if (b == 0) {
+                return new double[0];
+            } else {
+                double x = -c / b;
+                return new double[]{x};
+            }
+        }
+        double D = b * b - 4 * a * c;
+        if (D == 0) {
+            double x0 = -b / (2 * a);
+            return new double[]{x0};
+        } else if (D > 0) {
+            double x1 = (-b - Math.sqrt(D)) / (2 * a);
+            double x2 = (-b + Math.sqrt(D)) / (2 * a);
+            return new double[]{x1, x2};
+
+
+        } else {
+            return new double[0];
+        }
+
+    }
 }
