@@ -88,4 +88,11 @@ public class Array {
         }
         return newArray;
     }
+    static double[] arithmeticProgressionArray(int length, double a1, double d){
+     double[] newArray = new double[length];
+     for(int i=0; i<length; i++){
+         newArray[i]=a1+((i+1)-1)*d;
+     }
+     return newArray;
+    }
 }

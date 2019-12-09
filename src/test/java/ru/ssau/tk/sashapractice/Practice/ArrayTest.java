@@ -56,4 +56,10 @@ class ArrayTest {
      assertEquals(Array.notDivisibleByThreeArray(10)[1],2);
      assertEquals(Array.notDivisibleByThreeArray(10)[2],4);
     }
+    @Test
+    public void testArithmeticProgressionArray(){
+        assertEquals(Array.arithmeticProgressionArray(5,1,1)[1],2);
+        assertEquals(Array.arithmeticProgressionArray(5,1,3)[1], 4);
+        assertEquals(Array.arithmeticProgressionArray(5,7,0)[1], 7);
+    }
 }
