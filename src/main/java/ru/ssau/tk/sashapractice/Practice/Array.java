@@ -76,6 +76,16 @@ public class Array {
         } else {
             return new double[0];
         }
-
+    }
+    static int[] notDivisibleByThreeArray(int length) {
+        int[] newArray = new int[length];
+        int n = 1;
+        for (int i = 0; i < length; i++) {
+            if (n % 3 == 0) {
+                n++;
+            }
+            newArray[i] = n++;
+        }
+        return newArray;
     }
 }

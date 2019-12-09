@@ -50,4 +50,10 @@ class ArrayTest {
         assertEquals(treeQuadraticEquationArray[0], 1.0 / 3, 0.0001);
         assertEquals(Array.quadraticEquationArray(7, -1, 2).length, 0);
     }
+    @Test
+    public void testNotDivisibleByThreeArray(){
+     assertEquals(Array.notDivisibleByThreeArray(10)[0],1);
+     assertEquals(Array.notDivisibleByThreeArray(10)[1],2);
+     assertEquals(Array.notDivisibleByThreeArray(10)[2],4);
+    }
 }
