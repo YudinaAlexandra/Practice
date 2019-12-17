@@ -62,4 +62,10 @@ class ArrayTest {
         assertEquals(Array.arithmeticProgressionArray(5,1,3)[1], 4);
         assertEquals(Array.arithmeticProgressionArray(5,7,0)[1], 7);
     }
+    @Test
+    public void testGeometryProgressionArray(){
+        assertEquals(Array.geometryProgressionArray(5,1,2)[1], 2);
+        assertEquals(Array.geometryProgressionArray(5,5,3)[1], 15);
+        assertEquals(Array.geometryProgressionArray(5,1,0.1)[1], 0.1);
+    }
 }

@@ -95,4 +95,13 @@ public class Array {
      }
      return newArray;
     }
+    static double[] geometryProgressionArray(int length, double b1, double q){
+        double[] newArray = new double[length];
+        newArray[0]=b1;
+        for(int i=1; i<length; i++){
+            newArray[i]=newArray[i - 1] * q;
+        }
+        return newArray;
+    }
+
 }
