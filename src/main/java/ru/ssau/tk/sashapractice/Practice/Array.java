@@ -103,5 +103,13 @@ public class Array {
         }
         return newArray;
     }
-
+    static int[] symmetricArray(int length) {
+        var newArray = new int[length];
+        int j = 1;
+        for (int i = 0; i < Math.ceil(((double) length) / 2); i++) {
+            newArray[i] = j++;
+            newArray[length - i - 1] = newArray[i];
+        }
+        return newArray;
+    }
 }
