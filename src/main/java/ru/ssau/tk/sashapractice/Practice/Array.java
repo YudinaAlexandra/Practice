@@ -117,4 +117,12 @@ public class Array {
             array[i] = -array[i];
         }
     }
+    static boolean containedInArray(double[] array, double a){
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == a) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

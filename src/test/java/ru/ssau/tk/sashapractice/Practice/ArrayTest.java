@@ -83,4 +83,12 @@ class ArrayTest {
         assertEquals(array[2], 3.8, 0.0001);
         assertEquals(array[3], -4.2, 0.0001);
     }
+    @Test
+    public void testContainedInArray() {
+        double[] array = new double[]{1.2, 2.5, 3.8};
+        double firstNumber = 2.5;
+        double secondNumber = 26.9;
+        assertTrue(Array.containedInArray(array, firstNumber));
+        assertFalse(Array.containedInArray(array, secondNumber));
+    }
 }
