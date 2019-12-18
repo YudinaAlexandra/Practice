@@ -74,4 +74,13 @@ class ArrayTest {
         assertEquals(Array.symmetricArray(7)[3], 4);
         assertEquals(Array.symmetricArray(7)[6], 1);
     }
+    @Test
+    public void testOppositeArray(){
+        double[] array = new double[]{-1.2, 2.5, -3.8, 4.2};
+        Array.oppositeArray(array);
+        assertEquals(array[0], 1.2, 0.0001);
+        assertEquals(array[1], -2.5, 0.0001);
+        assertEquals(array[2], 3.8, 0.0001);
+        assertEquals(array[3], -4.2, 0.0001);
+    }
 }

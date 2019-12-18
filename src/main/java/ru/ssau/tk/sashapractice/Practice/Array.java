@@ -112,4 +112,9 @@ public class Array {
         }
         return newArray;
     }
+    static void oppositeArray(double[] array) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = -array[i];
+        }
+    }
 }
