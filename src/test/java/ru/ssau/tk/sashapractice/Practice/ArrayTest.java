@@ -113,4 +113,27 @@ class ArrayTest {
         assertTrue(Array.containedNullInArray(firstArray));
         assertFalse(Array.containedNullInArray(secondArray));
     }
+
+    @Test
+    public void testEvenNumberInArray() {
+        double[] firstArray = new double[]{1., 1.1, 3.5, 47.};
+        double[] secondArray = new double[]{0.7, 4., 5., 6., 7., 8., 10.};
+        assertEquals(Array.evenNumberInArray(firstArray), 0);
+        assertEquals(Array.evenNumberInArray(secondArray), 4);
+    }
+
+    @Test
+    public void testMaxElementInArray() {
+        Integer[] firstArray = new Integer[]{1, 120, 8, 15};
+        Integer[] secondArray = new Integer[]{};
+        assertEquals(Array.maxElementInArray(firstArray), 120);
+        assertEquals(Array.maxElementInArray(secondArray), null);
+    }
+    @Test
+    public void testSumOfEvenInArray(){
+        double[] firstArray = new double[]{1.2, 2.3, 3.8, 4.5};
+        double[] secondArray = new double[]{5., 6.2, 7.3, 8.6, 9.7, 10.4};
+        assertEquals(Array.sumOfEvenInArray(firstArray), 5.0);
+        assertEquals(Array.sumOfEvenInArray(secondArray), 22);
+    }
 }

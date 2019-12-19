@@ -1,7 +1,6 @@
 package ru.ssau.tk.sashapractice.Practice;
 
 
-
 public class Array {
     static public double[] newArray(int length) {
         double[] newArray = new double[length];
@@ -50,11 +49,12 @@ public class Array {
     static public double[] indexSquareArray(int lenght) {
         double[] newArray = new double[lenght];
         for (int i = 0; i < lenght; i++) {
-            newArray[i] = i*i;
+            newArray[i] = i * i;
         }
         return newArray;
     }
-    static public double[] quadraticEquationArray(double a, double b, double c){
+
+    static public double[] quadraticEquationArray(double a, double b, double c) {
         if (a == 0) {
             if (b == 0) {
                 return new double[0];
@@ -77,6 +77,7 @@ public class Array {
             return new double[0];
         }
     }
+
     static int[] notDivisibleByThreeArray(int length) {
         int[] newArray = new int[length];
         int n = 1;
@@ -88,21 +89,24 @@ public class Array {
         }
         return newArray;
     }
-    static double[] arithmeticProgressionArray(int length, double a1, double d){
-     double[] newArray = new double[length];
-     for(int i=0; i<length; i++){
-         newArray[i]=a1+((i+1)-1)*d;
-     }
-     return newArray;
-    }
-    static double[] geometryProgressionArray(int length, double b1, double q){
+
+    static double[] arithmeticProgressionArray(int length, double a1, double d) {
         double[] newArray = new double[length];
-        newArray[0]=b1;
-        for(int i=1; i<length; i++){
-            newArray[i]=newArray[i - 1] * q;
+        for (int i = 0; i < length; i++) {
+            newArray[i] = a1 + ((i + 1) - 1) * d;
         }
         return newArray;
     }
+
+    static double[] geometryProgressionArray(int length, double b1, double q) {
+        double[] newArray = new double[length];
+        newArray[0] = b1;
+        for (int i = 1; i < length; i++) {
+            newArray[i] = newArray[i - 1] * q;
+        }
+        return newArray;
+    }
+
     static int[] symmetricArray(int length) {
         var newArray = new int[length];
         int j = 1;
@@ -112,12 +116,14 @@ public class Array {
         }
         return newArray;
     }
+
     static void oppositeArray(double[] array) {
         for (int i = 0; i < array.length; i++) {
             array[i] = -array[i];
         }
     }
-    static boolean containedInArray(double[] array, double a){
+
+    static boolean containedInArray(double[] array, double a) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == a) {
                 return true;
@@ -125,12 +131,47 @@ public class Array {
         }
         return false;
     }
-    static boolean containedNullInArray(Integer[] array){
-        for (int i=0; i<array.length; i++){
-            if (array[i]==null){
+
+    static boolean containedNullInArray(Integer[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == null) {
                 return true;
             }
         }
         return false;
+    }
+
+    static int evenNumberInArray(double[] array) {
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    static Integer maxElementInArray(Integer[] array) {
+        Integer max = 0;
+        if (array.length == 0) {
+            return null;
+        } else {
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] > max) {
+                    max = array[i];
+                }
+            }
+        }
+        return max;
+    }
+
+    static double sumOfEvenInArray(double[] array) {
+        double sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (i % 2 == 0) {
+                sum = sum + array[i];
+            }
+        }
+        return sum;
     }
 }
