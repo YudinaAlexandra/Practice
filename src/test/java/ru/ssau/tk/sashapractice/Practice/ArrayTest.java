@@ -129,18 +129,28 @@ class ArrayTest {
         assertEquals(Array.maxElementInArray(firstArray), 120);
         assertEquals(Array.maxElementInArray(secondArray), null);
     }
+
     @Test
-    public void testSumOfEvenInArray(){
+    public void testSumOfEvenInArray() {
         double[] firstArray = new double[]{1.2, 2.3, 3.8, 4.5};
         double[] secondArray = new double[]{5., 6.2, 7.3, 8.6, 9.7, 10.4};
         assertEquals(Array.sumOfEvenInArray(firstArray), 5.0);
         assertEquals(Array.sumOfEvenInArray(secondArray), 22);
     }
+
     @Test
-    public void testFirstDividedMoreElementsThanLast(){
+    public void testFirstDividedMoreElementsThanLast() {
         int[] firstArray = new int[]{1, 4, 5, 6, 2};
         int[] secondArray = new int[]{2, 3, 5, 6, 1};
         assertTrue(Array.firstDividedMoreElementsThanLast(firstArray));
         assertFalse(Array.firstDividedMoreElementsThanLast(secondArray));
+    }
+
+    @Test
+    public void testElementOccursMostOften() {
+        double[] firstArray = new double[]{1.2, 3.5, 1.2, 4.8, 1.2};
+        double[] secondArray = new double[]{1.3, 2.5, 4.8, 2.5, 1.3, 8.9};
+        assertEquals(Array.elementOccursMostOften(firstArray), 1.2);
+        assertEquals(Array.elementOccursMostOften(secondArray), 1.3);
     }
 }

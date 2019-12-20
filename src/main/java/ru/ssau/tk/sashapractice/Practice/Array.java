@@ -191,4 +191,22 @@ public class Array {
             return false;
         }
     }
+    static double elementOccursMostOften(double[] array){
+        double element = array[0];
+        int maxNumberOfEntry = 0;
+        for (int i = 0; i < array.length; i++) {
+            int count = 1;
+            for (int j = 0; j < array.length; j++) {
+                if (array[j] == array[i]) {
+                    count++;
+                }
+                if (count > maxNumberOfEntry) {
+                    element = array[j];
+                    maxNumberOfEntry = count;
+                }
+            }
+        }
+        return element;
+
+    }
 }
