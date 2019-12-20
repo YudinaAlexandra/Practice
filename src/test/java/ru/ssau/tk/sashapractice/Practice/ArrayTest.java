@@ -136,4 +136,11 @@ class ArrayTest {
         assertEquals(Array.sumOfEvenInArray(firstArray), 5.0);
         assertEquals(Array.sumOfEvenInArray(secondArray), 22);
     }
+    @Test
+    public void testFirstDividedMoreElementsThanLast(){
+        int[] firstArray = new int[]{1, 4, 5, 6, 2};
+        int[] secondArray = new int[]{2, 3, 5, 6, 1};
+        assertTrue(Array.firstDividedMoreElementsThanLast(firstArray));
+        assertFalse(Array.firstDividedMoreElementsThanLast(secondArray));
+    }
 }

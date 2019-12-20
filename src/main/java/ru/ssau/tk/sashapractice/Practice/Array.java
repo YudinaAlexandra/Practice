@@ -174,4 +174,21 @@ public class Array {
         }
         return sum;
     }
+    static boolean  firstDividedMoreElementsThanLast(int [] array){
+        int dividedByFirst = 0;
+        int dividedByLast = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % array[0] == 0) {
+                dividedByFirst = dividedByFirst + 1;
+            }
+            if (array[i] % array[array.length - 1] == 0) {
+                dividedByLast = dividedByLast + 1;
+            }
+        }
+        if (dividedByFirst > dividedByLast) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
