@@ -219,6 +219,7 @@ public class Array {
         }
         return -1;
     }
+
     static void changeMinAndMax(double[] array) {
         double firstMaxNumber = Double.MIN_VALUE;
         double firstMinNumber = Double.MAX_VALUE;
@@ -236,5 +237,11 @@ public class Array {
         }
         array[indexOfMax] = firstMinNumber;
         array[indexOfMin] = firstMaxNumber;
+    }
+
+    static void getBitNegation(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = ~array[i];
+        }
     }
 }

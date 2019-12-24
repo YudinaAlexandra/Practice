@@ -153,18 +153,34 @@ class ArrayTest {
         assertEquals(Array.elementOccursMostOften(firstArray), 1.2);
         assertEquals(Array.elementOccursMostOften(secondArray), 1.3);
     }
+
     @Test
-    public void testFirstEqualToInputNumber(){
+    public void testFirstEqualToInputNumber() {
         double[] firstArray = new double[]{1.2, 3.5, 1.2, 4.8, 1.2};
         double[] secondArray = new double[]{1.3, 2.5, 4.8};
         assertEquals(Array.firstEqualToInputNumber(firstArray, 3.5), 1);
-        assertEquals(Array.firstEqualToInputNumber(secondArray,5.2), -1);
+        assertEquals(Array.firstEqualToInputNumber(secondArray, 5.2), -1);
     }
+
     @Test
-    public void testChangeMinAndMax(){
+    public void testChangeMinAndMax() {
         double[] firstArray = new double[]{1.2, 5.7, 4.8, 0.7};
         Array.changeMinAndMax(firstArray);
         assertEquals(firstArray[1], 0.7);
         assertEquals(firstArray[3], 5.7);
+    }
+
+    @Test
+    public void testGetBitNegation() {
+        int[] firstArray = new int[]{1, 2, 3, 4};
+        int[] secondArray = new int[]{1, 2, 3, 4};
+        Array.getBitNegation(firstArray);
+        for (int i = 0; i < firstArray.length; i++) {
+            assertEquals(firstArray[i], ~secondArray[i]);
+        }
+        Array.getBitNegation(firstArray);
+        for (int i = 0; i < firstArray.length; i++) {
+            assertEquals(firstArray[i], secondArray[i]);
+        }
     }
 }
