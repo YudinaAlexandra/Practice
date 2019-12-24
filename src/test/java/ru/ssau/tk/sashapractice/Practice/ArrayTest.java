@@ -183,6 +183,7 @@ class ArrayTest {
             assertEquals(firstArray[i], secondArray[i]);
         }
     }
+
     @Test
     public void testGetNegationArray() {
         int[] firstArray = new int[]{1, 2, 3};
@@ -195,5 +196,16 @@ class ArrayTest {
         assertEquals(negationArray[0], 1);
         assertEquals(negationArray[1], 2);
         assertEquals(negationArray[2], 3);
+    }
+
+    @Test
+    public void testGetSumOfNear() {
+        int[] firstArray = Array.getSumOfNear(new int[]{1, 2, 3, 4, 5, 6});
+        assertEquals(firstArray[0], 3);
+        assertEquals(firstArray[1], 7);
+        assertEquals(firstArray[2], 11);
+        int[] secondArray = Array.getSumOfNear(new int[]{7, 8, 9});
+        assertEquals(secondArray[0], 15);
+        assertEquals(secondArray[1], 9);
     }
 }

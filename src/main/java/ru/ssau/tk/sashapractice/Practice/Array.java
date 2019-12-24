@@ -251,4 +251,20 @@ public class Array {
         }
         return negationArray;
     }
+    static int[] getSumOfNear(int[] array) {
+        int[] arrayOfSumOfNear;
+        if (array.length % 2 == 0) {
+            arrayOfSumOfNear = new int[array.length / 2];
+            for (int i = 0; i < arrayOfSumOfNear.length; i++) {
+                arrayOfSumOfNear[i] = array[2 * i] + array[2 * i + 1];
+            }
+        } else {
+            arrayOfSumOfNear = new int[array.length / 2 + 1];
+            for (int i = 0; i < arrayOfSumOfNear.length - 1; i++) {
+                arrayOfSumOfNear[i] = array[2 * i] + array[2 * i + 1];
+            }
+            arrayOfSumOfNear[arrayOfSumOfNear.length - 1] = array[array.length - 1];
+        }
+        return arrayOfSumOfNear;
+    }
 }
