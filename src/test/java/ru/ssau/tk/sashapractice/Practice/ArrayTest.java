@@ -153,4 +153,11 @@ class ArrayTest {
         assertEquals(Array.elementOccursMostOften(firstArray), 1.2);
         assertEquals(Array.elementOccursMostOften(secondArray), 1.3);
     }
+    @Test
+    public void testFirstEqualToInputNumber(){
+        double[] firstArray = new double[]{1.2, 3.5, 1.2, 4.8, 1.2};
+        double[] secondArray = new double[]{1.3, 2.5, 4.8};
+        assertEquals(Array.firstEqualToInputNumber(firstArray, 3.5), 1);
+        assertEquals(Array.firstEqualToInputNumber(secondArray,5.2), -1);
+    }
 }

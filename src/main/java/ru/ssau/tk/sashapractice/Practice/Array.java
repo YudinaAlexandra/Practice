@@ -174,7 +174,8 @@ public class Array {
         }
         return sum;
     }
-    static boolean  firstDividedMoreElementsThanLast(int [] array){
+
+    static boolean firstDividedMoreElementsThanLast(int[] array) {
         int dividedByFirst = 0;
         int dividedByLast = 0;
         for (int i = 0; i < array.length; i++) {
@@ -191,7 +192,8 @@ public class Array {
             return false;
         }
     }
-    static double elementOccursMostOften(double[] array){
+
+    static double elementOccursMostOften(double[] array) {
         double element = array[0];
         int maxNumberOfEntry = 0;
         for (int i = 0; i < array.length; i++) {
@@ -207,6 +209,14 @@ public class Array {
             }
         }
         return element;
+    }
 
+    static double firstEqualToInputNumber(double[] array, double number) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == number) {
+                return i;
+            }
+        }
+        return -1;
     }
 }
