@@ -267,4 +267,15 @@ public class Array {
         }
         return arrayOfSumOfNear;
     }
+    static boolean[] getTrueOrFalse(int[] array) {
+        boolean[] arrayGetTrueOrFalse = new boolean[array.length];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
+                arrayGetTrueOrFalse[i] = true;
+            } else {
+                arrayGetTrueOrFalse[i] = false;
+            }
+        }
+        return arrayGetTrueOrFalse;
+    }
 }

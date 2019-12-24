@@ -208,4 +208,13 @@ class ArrayTest {
         assertEquals(secondArray[0], 15);
         assertEquals(secondArray[1], 9);
     }
+
+    @Test
+    public void testGetTrueOrFalse() {
+        int[] firstArray = new int[]{1, 2, 3, 4};
+        assertFalse(Array.getTrueOrFalse(firstArray)[0]);
+        assertTrue(Array.getTrueOrFalse(firstArray)[1]);
+        assertFalse(Array.getTrueOrFalse(firstArray)[2]);
+        assertTrue(Array.getTrueOrFalse(firstArray)[3]);
+    }
 }
