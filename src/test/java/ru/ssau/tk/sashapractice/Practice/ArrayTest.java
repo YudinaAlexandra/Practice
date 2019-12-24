@@ -183,4 +183,17 @@ class ArrayTest {
             assertEquals(firstArray[i], secondArray[i]);
         }
     }
+    @Test
+    public void testGetNegationArray() {
+        int[] firstArray = new int[]{1, 2, 3};
+        int[] negationArray = new int[firstArray.length];
+        negationArray = Array.getNegationArray(firstArray);
+        assertEquals(negationArray[0], -2);
+        assertEquals(negationArray[1], -3);
+        assertEquals(negationArray[2], -4);
+        negationArray = Array.getNegationArray(negationArray);
+        assertEquals(negationArray[0], 1);
+        assertEquals(negationArray[1], 2);
+        assertEquals(negationArray[2], 3);
+    }
 }

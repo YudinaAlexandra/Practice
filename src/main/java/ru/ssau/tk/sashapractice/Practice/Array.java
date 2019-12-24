@@ -244,4 +244,11 @@ public class Array {
             array[i] = ~array[i];
         }
     }
+    static int[] getNegationArray(int[] array) {
+        int[] negationArray = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            negationArray[i] = ~array[i];
+        }
+        return negationArray;
+    }
 }
