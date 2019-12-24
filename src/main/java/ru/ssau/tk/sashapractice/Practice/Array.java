@@ -219,4 +219,22 @@ public class Array {
         }
         return -1;
     }
+    static void changeMinAndMax(double[] array) {
+        double firstMaxNumber = Double.MIN_VALUE;
+        double firstMinNumber = Double.MAX_VALUE;
+        int indexOfMax = 0;
+        int indexOfMin = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > firstMaxNumber) {
+                firstMaxNumber = array[i];
+                indexOfMax = i;
+            }
+            if (array[i] < firstMinNumber) {
+                firstMinNumber = array[i];
+                indexOfMin = i;
+            }
+        }
+        array[indexOfMax] = firstMinNumber;
+        array[indexOfMin] = firstMaxNumber;
+    }
 }

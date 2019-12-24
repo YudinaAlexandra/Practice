@@ -160,4 +160,11 @@ class ArrayTest {
         assertEquals(Array.firstEqualToInputNumber(firstArray, 3.5), 1);
         assertEquals(Array.firstEqualToInputNumber(secondArray,5.2), -1);
     }
+    @Test
+    public void testChangeMinAndMax(){
+        double[] firstArray = new double[]{1.2, 5.7, 4.8, 0.7};
+        Array.changeMinAndMax(firstArray);
+        assertEquals(firstArray[1], 0.7);
+        assertEquals(firstArray[3], 5.7);
+    }
 }
