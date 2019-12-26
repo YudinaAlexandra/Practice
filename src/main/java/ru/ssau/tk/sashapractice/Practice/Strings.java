@@ -32,4 +32,14 @@ public class Strings {
         }
         return true;
     }
+
+    public static int getIndexOfFirstEntry(String first, String second){
+        return first.indexOf(second);
+    }
+    public static int getIndexOfFirstEntryInSecondPartOfFirstString(String first, String second){
+        return first.indexOf(second, first.length()/2);
+    }
+    public static int getIndexOfLastEntryInFirstPartOfFirstString(String first, String second){
+        return first.lastIndexOf(second, first.length()/2);
+    }
 }
