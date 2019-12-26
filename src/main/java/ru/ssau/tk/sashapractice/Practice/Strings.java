@@ -15,10 +15,21 @@ public class Strings {
             System.out.println(bytes[i]);
         }
     }
-    public static void stringComparison(){
+
+    public static void stringComparison() {
         String firstString = "String for test method";
         String secondString = new String(firstString);
-        System.out.println(firstString==secondString); //сравнивает ссылки - false
+        System.out.println(firstString == secondString); //сравнивает ссылки - false
         System.out.println(firstString.equals(secondString)); //сравнивает значения - true
+    }
+
+    static public boolean checkPalindrome(String string) {
+        int length = string.length();
+        for (int i = 0; i < length; i++) {
+            if (string.charAt(i) != string.charAt(length - i - 1)) {
+                return false;
+            }
+        }
+        return true;
     }
 }

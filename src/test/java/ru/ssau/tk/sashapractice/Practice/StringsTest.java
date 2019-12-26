@@ -1,6 +1,7 @@
 package ru.ssau.tk.sashapractice.Practice;
 
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 class StringsTest {
     @Test
@@ -21,5 +22,13 @@ class StringsTest {
     @Test
     public void testStringComparison() {
         Strings.stringComparison();
+    }
+
+    @Test
+    public void testCheckPalindrome(){
+        String firstString = "шалаш";
+        String secondString = "палатка";
+        assertTrue(Strings.checkPalindrome(firstString));
+        assertFalse(Strings.checkPalindrome(secondString));
     }
 }
