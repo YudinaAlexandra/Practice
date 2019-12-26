@@ -244,6 +244,7 @@ public class Array {
             array[i] = ~array[i];
         }
     }
+
     static int[] getNegationArray(int[] array) {
         int[] negationArray = new int[array.length];
         for (int i = 0; i < array.length; i++) {
@@ -251,6 +252,7 @@ public class Array {
         }
         return negationArray;
     }
+
     static int[] getSumOfNear(int[] array) {
         int[] arrayOfSumOfNear;
         if (array.length % 2 == 0) {
@@ -267,6 +269,7 @@ public class Array {
         }
         return arrayOfSumOfNear;
     }
+
     static boolean[] getTrueOrFalse(int[] array) {
         boolean[] arrayGetTrueOrFalse = new boolean[array.length];
         for (int i = 0; i < array.length; i++) {
@@ -278,6 +281,7 @@ public class Array {
         }
         return arrayGetTrueOrFalse;
     }
+
     public static void nanInArray(double[] array) {
         for (int i = 0; i < array.length; i++) {
             if (Double.isNaN(array[i])) {
@@ -287,6 +291,7 @@ public class Array {
             }
         }
     }
+
     public static Double multiplyOfNumber(Double[] array) {
         double multiply = 1;
         for (Double number : array) {
@@ -296,5 +301,11 @@ public class Array {
             multiply = multiply * number;
         }
         return multiply;
+    }
+
+    public static void printStrings(String[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
     }
 }

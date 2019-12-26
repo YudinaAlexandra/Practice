@@ -236,4 +236,10 @@ class ArrayTest {
         assertEquals(Array.multiplyOfNumber(secondArray), 20);
         assertEquals(Array.multiplyOfNumber(thirdArray), 3.84);
     }
+
+    @Test
+    public void testPrintStrings(){
+        String[] firstArray = new String[]{"My", "string", "array"};
+        Array.printStrings(firstArray);
+    }
 }
