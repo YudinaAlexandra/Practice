@@ -287,4 +287,14 @@ public class Array {
             }
         }
     }
+    public static Double multiplyOfNumber(Double[] array) {
+        double multiply = 1;
+        for (Double number : array) {
+            if (number.isNaN() || number == Double.POSITIVE_INFINITY || number == Double.NEGATIVE_INFINITY || number == 0) {
+                continue;
+            }
+            multiply = multiply * number;
+        }
+        return multiply;
+    }
 }

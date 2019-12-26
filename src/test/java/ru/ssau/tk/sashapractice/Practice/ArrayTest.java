@@ -226,4 +226,14 @@ class ArrayTest {
         assertEquals(firstArray[1], 3.2);
         assertEquals(firstArray[2], Double.NaN);
     }
+
+    @Test
+    public void testMultiplyOfNumber(){
+        Double[] firstArray = new Double[]{1., 2., 3., Double.NaN};
+        Double[] secondArray = new Double[]{4., 5., 0., 1.};
+        Double[] thirdArray = new Double[]{1.2, Double.POSITIVE_INFINITY, 3.2, Double.NEGATIVE_INFINITY};
+        assertEquals(Array.multiplyOfNumber(firstArray), 6);
+        assertEquals(Array.multiplyOfNumber(secondArray), 20);
+        assertEquals(Array.multiplyOfNumber(thirdArray), 3.84);
+    }
 }
