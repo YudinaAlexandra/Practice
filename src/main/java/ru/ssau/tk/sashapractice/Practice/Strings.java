@@ -42,4 +42,10 @@ public class Strings {
     public static int getIndexOfLastEntryInFirstPartOfFirstString(String first, String second){
         return first.lastIndexOf(second, first.length()/2);
     }
+    public static String replaceOccurrencesOf(String string, String regex, String replacement){
+        for (int i=0; i<100 && string.contains(regex); i++){
+            string = string.replaceAll(regex, replacement);
+        }
+        return string;
+    }
 }

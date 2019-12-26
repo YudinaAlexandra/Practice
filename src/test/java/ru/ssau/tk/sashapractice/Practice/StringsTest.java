@@ -32,28 +32,37 @@ class StringsTest {
         assertTrue(Strings.checkPalindrome(firstString));
         assertFalse(Strings.checkPalindrome(secondString));
     }
+
     @Test
-    public void testGetIndexOfFirstEntry(){
+    public void testGetIndexOfFirstEntry() {
         String firstString = "abcabcabc";
         String secondString = "ca";
         String thirdString = "dh";
         assertEquals(Strings.getIndexOfFirstEntry(firstString, secondString), 2);
         assertEquals(Strings.getIndexOfFirstEntry(firstString, thirdString), -1);
     }
+
     @Test
-    public void testGetIndexOfFirstEntryInSecondPartOfFirstString(){
+    public void testGetIndexOfFirstEntryInSecondPartOfFirstString() {
         String firstString = "abcabcabc";
         String secondString = "bc";
         String thirdString = "dh";
-        assertEquals(Strings.getIndexOfFirstEntry(firstString, secondString), 1);
-        assertEquals(Strings.getIndexOfFirstEntry(firstString, thirdString), -1);
+        assertEquals(Strings.getIndexOfFirstEntryInSecondPartOfFirstString(firstString, secondString), 4);
+        assertEquals(Strings.getIndexOfFirstEntryInSecondPartOfFirstString(firstString, thirdString), -1);
     }
+
     @Test
-    public void testGetIndexOfLastEntryInFirstPartOfFirstString(){
+    public void testGetIndexOfLastEntryInFirstPartOfFirstString() {
         String firstString = "abcabcabc";
         String secondString = "bc";
         String thirdString = "dh";
-        assertEquals(Strings.getIndexOfFirstEntry(firstString, secondString), 1);
-        assertEquals(Strings.getIndexOfFirstEntry(firstString, thirdString), -1);
+        assertEquals(Strings.getIndexOfLastEntryInFirstPartOfFirstString(firstString, secondString), 4);
+        assertEquals(Strings.getIndexOfLastEntryInFirstPartOfFirstString(firstString, thirdString), -1);
     }
+
+    @Test
+    public void testReplaceOccurrencesOf() {
+        assertEquals(Strings.replaceOccurrencesOf("ороророро", "оро", "ро"), "роррро");
+    }
+
 }
