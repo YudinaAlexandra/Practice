@@ -15,4 +15,10 @@ public class Strings {
             System.out.println(bytes[i]);
         }
     }
+    public static void stringComparison(){
+        String firstString = "String for test method";
+        String secondString = new String(firstString);
+        System.out.println(firstString==secondString); //сравнивает ссылки - false
+        System.out.println(firstString.equals(secondString)); //сравнивает значения - true
+    }
 }

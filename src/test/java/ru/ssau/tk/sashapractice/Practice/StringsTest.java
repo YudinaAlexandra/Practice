@@ -17,4 +17,9 @@ class StringsTest {
         String secondString = "Тест для метода";
         Strings.outputBytes(secondString);
     }
+
+    @Test
+    public void testStringComparison() {
+        Strings.stringComparison();
+    }
 }
