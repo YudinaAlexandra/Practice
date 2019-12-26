@@ -217,4 +217,13 @@ class ArrayTest {
         assertFalse(Array.getTrueOrFalse(firstArray)[2]);
         assertTrue(Array.getTrueOrFalse(firstArray)[3]);
     }
+
+    @Test
+    public void testNaNInArray() {
+        double[] firstArray = new double[]{1.2, 3.2, Double.NaN};
+        Array.nanInArray(firstArray);
+        assertEquals(firstArray[0], 1.2);
+        assertEquals(firstArray[1], 3.2);
+        assertEquals(firstArray[2], Double.NaN);
+    }
 }

@@ -278,4 +278,13 @@ public class Array {
         }
         return arrayGetTrueOrFalse;
     }
+    public static void nanInArray(double[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (Double.isNaN(array[i])) {
+                return;
+            } else {
+                java.util.Arrays.sort(array);
+            }
+        }
+    }
 }
