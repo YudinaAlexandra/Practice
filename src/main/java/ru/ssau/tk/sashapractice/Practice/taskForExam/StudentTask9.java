@@ -48,16 +48,6 @@ public class StudentTask9 {
         this.yearOfBirth = yearOfBirth;
     }
 
-    /*public void setCityOfBirth(String cityOfBirth) {
-        this.cityOfBirth = cityOfBirth;
-    }
-    private static Collection myCollection(StudentTask9[] students){
-        Collection collection = new ArrayList();
-        for(StudentTask9 student : students){
-            collection.add(student.getCityOfBirth());
-        }
-        return collection;
-    }*/
     private static Collection myCollection(StudentTask9[] students){
         HashSet <String> collectionForCity = new HashSet<>();
         for(StudentTask9 student : students){
